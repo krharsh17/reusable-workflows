@@ -5,7 +5,7 @@ on:
 
 jobs:
   test:
-    uses: krharsh17/reusable-workflows/.github/workflows/add.yaml@latest
+    uses: krharsh17/reusable-workflows/.github/workflows/add.yaml@main
 
   print:
     runs-on: ubuntu-latest
