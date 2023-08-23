@@ -1,0 +1,15 @@
+name: Test workflow
+
+on: workflow_dispatch
+
+jobs:
+  test:
+    uses: krharsh17/reusable-workflows/.github/workflows/add.yaml
+
+  print:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - run: echo ${{ needs.test.outputs.sum }}
+
+    
