@@ -12,12 +12,4 @@ jobs:
     uses: krharsh17/reusable-workflows/.github/workflows/add.yaml@main
     with:
       number1: ${{ matrix.number1 }}
-      number2: ${{ matrix.number2 }}
-
-  print:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - run: echo ${{ needs.test.outputs.sum }}
-
-    
+      number2: ${{ matrix.number2 }}   
