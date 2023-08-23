@@ -1,10 +1,11 @@
 name: Test workflow
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
 
 jobs:
   test:
-    uses: krharsh17/reusable-workflows/.github/workflows/add.yaml
+    uses: krharsh17/reusable-workflows/.github/workflows/add.yaml@latest
 
   print:
     runs-on: ubuntu-latest
