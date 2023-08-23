@@ -28,15 +28,11 @@ jobs:
       sum: ${{ steps.calculate.outputs.sum }}
     
     steps:
-      - id: checkout
-        name: Checkout repository
-        uses: actions/checkout@v2
-        
       - id: set-up-env
         name: Set up environment
         run: |
-          echo "NUMBER1=${{ github.event.inputs.number1 }}" >> $GITHUB_ENV
-          echo "NUMBER2=${{ github.event.inputs.number2 }}" >> $GITHUB_ENV
+          echo "NUMBER1=${{ inputs.number1 }}" >> $GITHUB_ENV
+          echo "NUMBER2=${{ inputs.number2 }}" >> $GITHUB_ENV
           
       - name: Calculate sum
         id: calculate
