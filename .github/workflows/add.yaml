@@ -38,5 +38,6 @@ jobs:
         id: calculate
         run: |
           sum=$((NUMBER1 + NUMBER2))
+          echo "${sum}"
           echo "SUM=${sum}" >> $GITHUB_OUTPUT
           
